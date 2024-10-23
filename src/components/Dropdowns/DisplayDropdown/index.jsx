@@ -39,9 +39,7 @@ function DisplayDropdown({ grouping, setGrouping, ordering, setOrdering }) {
     <div className="display-dropdown" ref={componentRef}>
       <div className="dropdown-label-container" onClick={openDropdown}>
         <img src={display} alt="ab" />
-        {/* <LuSettings2 color='#6b6f76' /> */}
         <div className="dropdown-label">Display</div>
-        {/* <BiChevronDown color='#6b6f76' /> */}
         <img src={down} alt="ab" />
       </div>
       <div className={`dropdown-content-container ${visible && "visible"}`}>

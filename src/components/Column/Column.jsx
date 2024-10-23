@@ -3,6 +3,7 @@ import Card from '../Card';
 import "./column.css";
 import add from '../../utils/add.svg'
 import threeDot from '../../utils/3 dot menu.svg'
+
 import { getPriorityIcon, getStatusIcon } from '../../utils/helper';
 import UserIcon from '../UserIcon';
 
@@ -44,15 +45,15 @@ function Column({ tickets, grouping, groupBy, userIdToData }) {
                 </div>
             </div>
             <div className='cards-container'>
-                
                 {tickets.map((ticket) => (
                     <Card
-                        key={ticket.id}
-                        ticket={ticket}
-                        userData={userIdToData[ticket.userId]}
-                        hideStatusIcon={grouping === "status"}
-                        hideProfileIcon={grouping === "user"}
-                    />
+                    key={ticket.id}
+                    ticket={ticket}
+                    userData={userIdToData[ticket.userId]}
+                    hideStatusIcon={grouping === "status"}
+                    hideProfileIcon={grouping === "user"}
+                    grouping={grouping} // Pass the grouping prop
+                />
                 ))}
             </div>
         </div>
